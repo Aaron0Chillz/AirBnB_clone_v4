@@ -43,3 +43,9 @@ def hbnb():
 if __name__ == "__main__":
     """ Main Function """
     app.run(host='0.0.0.0', port=5000)
+
+
+@app.route('/0-hbnb')
+def hbnb():
+    cache_id = str(uuid.uuid())
+    return render_template('0-hbnb.html', cache_id=cache_id)
